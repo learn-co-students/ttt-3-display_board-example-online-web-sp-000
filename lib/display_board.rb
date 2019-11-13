@@ -6,8 +6,13 @@ def display_board
   row2 = ["   ", "   ", "   "]
   row3 = ["   ", "   ", "   "]
   dashes = "-----------"
-  board = [row1, dashes, row2, dashes, row3]
+  board = [row1, row2, row3]
+  counter = 0
   board.each do |row|
     puts row.join("|")
+    if counter < 2
+      puts dashes
+      counter += 1
+    end
   end
 end
