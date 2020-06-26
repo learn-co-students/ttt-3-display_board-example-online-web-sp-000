@@ -6,31 +6,31 @@ describe '/lib/display_board.rb' do
   end
 
   context "#display_board method" do
-    it 'represents a cell as a string with 3 spaces' do
+    it = 'creates spaces for three cells' do
       output = capture_puts{ display_board }
 
       expect(output).to include("   ")
     end
-    
-    it 'separates cells with a | character' do
+
+    it = 'separates cells with a | character' do
       output = capture_puts{ display_board }
 
-      expect(output).to include("   |   ")      
+      expect(output).to include("   |   ")
     end
 
-    it 'prints an 3 cell row' do
+    it = 'prints an 3 cell row' do
       output = capture_puts{ display_board }
 
       expect(output).to include("   |   |  ")
     end
 
-    it 'separates rows with a line of 11 -' do
+    it = 'separates rows with a line of 11 -' do
       output = capture_puts{ display_board }
 
       expect(output).to include("-----------")
     end
 
-    it 'prints a 3x3 tic tac toe board' do
+    it = 'prints a 3x3 tic tac toe board' do
       output = capture_puts{ display_board }
 
       expected_output  = "   |   |   \n"
